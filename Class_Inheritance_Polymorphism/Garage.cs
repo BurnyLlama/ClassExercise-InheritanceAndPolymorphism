@@ -11,7 +11,7 @@ namespace Class_Inheritance_Polymorphism
         public Vehicle[] ParkedVehicles;
         public Garage(int parkingSpaces)
         {
-            this.ParkedVehicles = new Vehicle[parkingSpaces];
+            ParkedVehicles = new Vehicle[parkingSpaces];
         }
 
         public void ParkVehicle(Vehicle vehicleToPark)
@@ -48,7 +48,7 @@ namespace Class_Inheritance_Polymorphism
             Console.WriteLine("-------------------------------------");
             Console.WriteLine("These are the vehicles in the garage:");
             Console.WriteLine("-------------------------------------");
-            foreach (Vehicle vehicle in this.ParkedVehicles)
+            foreach (Vehicle vehicle in ParkedVehicles)
             {
                 if (vehicle == null)
                 {
@@ -64,14 +64,14 @@ namespace Class_Inheritance_Polymorphism
         public void GetVehicle(int spotNumber)
         {
             // Check if that spot is empty.
-            if (this.ParkedVehicles[spotNumber] == null)
+            if (ParkedVehicles[spotNumber] == null)
             {
                 Console.WriteLine("Sorry, but there is no vehicle at that spot.");
                 return;
             }
 
-            this.ParkedVehicles[spotNumber].IsParked = false;
-            this.ParkedVehicles[spotNumber] = null;
+            ParkedVehicles[spotNumber].IsParked = false;
+            ParkedVehicles[spotNumber] = null;
         }
     }
 }

@@ -8,5 +8,10 @@ namespace Class_Inheritance_Polymorphism
 {
     internal class Car : Vehicle
     {
+        public Car()
+        {
+            MaxPassengers = 4;
+            CreatePassengers(4);
+        }
     }
 }

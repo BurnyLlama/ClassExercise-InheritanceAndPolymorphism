@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             Vehicle myVolvo = new Volvo();
+            myVolvo.ShowPassengers();
             myVolvo.Accelerate();
             myVolvo.Accelerate();
             myVolvo.HonkHorn();
@@ -13,6 +14,7 @@
             Console.WriteLine();
 
             Vehicle myBMW = new BMW();
+            myBMW.ShowPassengers();
             myBMW.Accelerate();
             myBMW.Accelerate();
             myBMW.HonkHorn();
@@ -22,6 +24,7 @@
 
 
             Vehicle myHarleyDavidson = new HarleyDavidson();
+            myHarleyDavidson.ShowPassengers();
             myHarleyDavidson.Accelerate();
             myHarleyDavidson.Accelerate();
             myHarleyDavidson.HonkHorn();
@@ -30,6 +33,7 @@
             Console.WriteLine();
 
             Vehicle myHonda = new Honda();
+            myHonda.ShowPassengers();
             myHonda.Accelerate();
             myHonda.Accelerate();
             myHonda.HonkHorn();
@@ -51,6 +55,18 @@
 
             myGarage.GetVehicle(1);
             myGarage.ListParkedVehicles();
+
+            // Test name generation:
+            //while (true)
+            //{
+            //    Console.Clear();
+            //    for (int i = 0; i < 15; i++)
+            //    {
+            //        string name = IdentityGenerator.WholeName();
+            //        Console.WriteLine(name);
+            //    }
+            //    Console.ReadKey();
+            //}
         }
     }
 }
